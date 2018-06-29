@@ -1,0 +1,276 @@
+h/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 6, 2018, 2:37:16 PM
+    Author     : rzakari
+*/
+/*
+REFERENCES FOR CODE SNIPPETS
+Bouncy Effect (ONLY WORKS FOR CHROME): https://cssreset.com/bouncing-text-effect-with-css/
+*/
+
+body{
+    background:#F0E8E8;  
+}
+
+#main{
+   margin: 60px 200px 60px 200px;
+   background: #F3DEDE;
+   position: relative;
+   height: 3850px;
+   width: auto;
+   border-radius: 20px;  
+}
+
+h1{
+    font-family:Amatic SC;
+    color: #EF6A5C;
+    font-weight: bolder;
+}
+
+img {
+max-width: 100%;
+display: block;
+height: auto;
+}
+
+#specialSeuss{
+    font-family: Amatic SC;
+    color: #EF5350;
+    cursor: default;
+    display: inline-block;
+    animation-name: bounce;
+    animation-duration: 1.0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    font-size: 80px;
+    /*color: #FFF;*/
+    text-align: center;
+    line-height: 100px;
+    text-shadow: 0 1px 0 #CCC,
+    0 2px 0 #f8f8ff,
+    0 3px 0 #CCC,
+    0 4px 0 #CCC,
+    0 5px 0 #CCC,
+    0 6px 0 transparent,
+    0 7px 0 transparent,
+    0 8px 0 transparent,
+    0 9px 0 transparent/*
+    0 10px 10px rgba(0, 0, 0, .6);*/  
+}
+
+#quoteSeuss{
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    font-family: Gaegu;
+ 
+}
+
+#img-caption{
+	position: relative;
+    right: -438px;
+	font-style: italic;
+}
+.timeline{
+    background-color: #a96f6f;
+    border-radius: 20px; 
+    width:80%;
+    transform: translateX(150px);
+}
+/*Adding Initial CSS Styles*/
+.timeline ul li{
+    list-style-type: none;
+    position: relative;
+    width: 10px;
+    margin: auto auto auto auto;
+    padding-top: 50px;
+    background: #fff;
+    transition: background .5s ease-in-out;
+  }
+  
+.timeline ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: inherit;  
+      
+}
+
+.timeline ul li.in-view::after {
+    background: #FFF;
+}
+
+/*Timeline Element Styles*/
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff2cc;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+ 
+.timeline ul li div ::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/*Styles for the odd list elements (items)*/
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+  transform: translate3d(200px,0,0);
+}
+
+.timeline ul li:nth-child(odd) div ::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #fff2cc transparent transparent;
+}
+
+/*Styles for the even list elements (items)*/
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+  transform: translate3d(-200px,0,0);
+}
+ 
+.timeline ul li:nth-child(even) div ::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #fff2cc;
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/*To adjust for smaller screens between 600px and 900 px)*/
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -289px; /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+   
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+   
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+   
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #F45B69 transparent transparent;
+  }
+}
+
+
+/*Images Handeling using CSS*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    border-radius: 10px;
+}
+
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}

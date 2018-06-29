@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<head>
+    <title> Tribute to Dr. Seuss</title>
+    <meta charset="UTF-8">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--for the css bounce effect-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic SC" rel="stylesheet" type="text/css">
+    <!--Linking to External CSS-->
+    <link rel="stylesheet" href="seussCSS.css">
+    <!--Linking to External JS-->
+    <script src="seussJQuery.js"></script>
+    <!--Reference Codes for Timeline and Dr. Suess Timeline
+    Timeline Template: https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528
+    Dr. Suess Timeline 1: http://www.softschools.com/timelines/dr_seuss_timeline/241/
+    Dr. Suess Timeline 2:https://worldhistoryproject.org/topics/dr-seuss
+    -->
+    
+</head>
+
+<body>
+    <!-- The Modal -->
+	<!-- Button trigger modal -->
+	<div class="modal" id="myModal01" tabindex="-1">
+		
+			<span class="close">×</span>
+			<img class="modal-content" id="img01">
+			<div id="caption"></div>
+		
+    </div>
+            
+    <div class="container-fluid" id="main">
+        <h1 class="text-center" id="title" ><span id="specialSeuss">Dr.</span> Theodor <span id="specialSeuss">Seuss</span> Geisel</h1>
+        
+        <div id="quoteSeuss">
+            <p>"Today you are you! That is truer than true! There is no one alive who is you-er than you!" <span style="font-size: 15px;font-family: Verdana;font-weight: lighter; font-style:normal">~from Dr. Seuss's Happy Birthday to You! (1959)</span></p>
+        </div>
+        
+        <div class="text-center" id="img-div">
+            <img class="img-thumbnail" src="http://i0.wp.com/www.haashall.org/wp-content/uploads/2018/02/Dr.-Seuss.jpg" alt="Dr. Seuss and characters banner" width="1050" style="opacity:0.8" id="image">
+			<figcaption id="img-caption">
+				Dr. Seuss and His Characters
+			</figcaption>
+        </div>
+    
+        <div id="timelineSeuss" class="row">
+            
+            <h3 id="tribute-info" class="col-sm-12 col-sm-offset-1" style="font-weight:bolder;font-family:Amatic SC;font-size: 50px;"> Dr. Seuss's Chronological Biography: </h3>
+              
+            <div class="timeline col-sm-12" >
+                <ul>
+                <li id="seussTxt1" onmouseover="imgFunc(this.id, 'suessIMG01')" style="cursor: pointer;">
+                    <img id= "suessIMG01" alt="Seuss as a kid." width="50" src="https://bit.ly/2qXlstE" style="display:none;">
+                    <div> 
+                        <time style="font-weight: bold;">1904</time> - Dr. Seuss was born in Springfield, Massachusetts. He was the son of German Immigrants Henrietta Seuss and Theodor Robert Geisel.
+                    </div> 
+                </li>
+                <li id="seussTxt2" onmouseover="imgFunc(this.id, 'suessIMG02')" style="cursor: pointer;" data-toggle="modal" data-target="#myModal01">
+                    <img id= "suessIMG02" alt="Theodor Seuss Geisel as a student in 1925. (photo courtesy Dartmouth College Library)" width="50" src="https://bit.ly/2x1Uoz0" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1921 to 1925</time> - Theodor goes to Dartmouth College where he first took on his famous pen name "Seuss" to be able continue his work on the <i>Jack-O-Lantern</i> article without the administration's knowledge
+                    <br>(with whom he had some conflict with).
+                    </div>
+                </li>
+                <li id="seussTxt3" onmouseover="imgFunc(this.id, 'suessIMG03')" style="cursor: pointer;">
+                    <img id= "suessIMG03" alt=" 'Dr.' Seuss" width="50" src="https://bit.ly/2IJa1kc" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1926</time> - Theodor eventually adds the prefix "Dr." to his pen name to be officially called "Dr. Suess".
+                    </div>
+                </li>
+                <li id="seussTxt4" onmouseover="imgFunc(this.id, 'suessIMG04')" style="cursor: pointer;">
+                    <img id= "suessIMG04" alt="Seuss with his first wife, Helen, in 1957." width="50" src="https://bit.ly/2J20pR6" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1927</time> - Dr. Suess marries Helen Palmer whom he met Oxford University.
+                    </div>
+                </li>
+                <li id="seussTxt5" onmouseover="imgFunc(this.id, 'suessIMG05')" style="cursor: pointer;">
+                    <img id= "suessIMG05" alt=" <q>Quick, Henry! the Flit.</q>" width="50" src="https://bit.ly/2s5Imio" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1928</time> - Dr. Suess publishes his first artwork in for the Flit advertising campaign. The Flit was run for 17 years and made Dr. Seuss's tagline "Quick, Henry, the Flit!" a popular catchphrase in the United States. 
+                    </div>
+                </li>
+                <li id="seussTxt6" onmouseover="imgFunc(this.id, 'suessIMG06')" style="cursor: pointer;">
+                    <img id= "suessIMG06" alt="<b><i>'The Pocket Book of Boners'</i></b> by Dr. Seuss." width="50" src="https://bit.ly/2GIo0Bf" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1931</time> - <i>The Pocket Book of Boners</i> is published as Seuss's first illustrated book.
+                    </div>
+                </li>
+                <li id="seussTxt7" onmouseover="imgFunc(this.id, 'suessIMG07')" style="cursor: pointer;">
+                    <img id= "suessIMG07" alt="<b><i>'And to Think I Saw It on Mulberry Street'" width="50" src="https://bit.ly/2klKaQZ" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1937</time> - Dr. Suess and Robert Carington publish Seuss's first children's book <i>And to Think I Saw It on Mulberry Street</i>.
+                    </div>
+                </li>
+                <li id="seussTxt8" onmouseover="imgFunc(this.id, 'suessIMG08')" style="cursor: pointer;">
+                    <img id= "suessIMG08" alt="<b><i>'The King's Stilts'" width="50" src="https://bit.ly/2IY8kyX" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1939</time> - World War II begins, and Seuss publishes <i>The King's Stilts</i>.
+                    </div>
+                </li>
+                <li id="seussTxt9" onmouseover="imgFunc(this.id, 'suessIMG09')" style="cursor: pointer;">
+                    <img id= "suessIMG09" alt="Dr. Seuss Goes to War." width="50" src="https://bit.ly/2kk2olV" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1943</time> - Seuss joins the Army, where he served until 1946. He was the commander of the Animation Dept of the First Motion Picture Unit of the United States Army Air Forces.
+                    </div>
+                </li>
+                <li id="seussTxt10" onmouseover="imgFunc(this.id, 'suessIMG10')" style="cursor: pointer;">
+                    <img id= "suessIMG10" alt="<b><i>'McElligot's Pool'" width="50" src="https://bit.ly/2GJDdC3" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1947</time> - His book <i>McElligot's Pool</i> is published. The book is notable for starting with colored pages and ending with black and white pages.
+                    </div>
+                </li>
+                <li id="seussTxt11" onmouseover="imgFunc(this.id, 'suessIMG11')" style="cursor: pointer;">
+                    <img id= "suessIMG11" alt="<b><i>'Horton Hears a Who'" width="50" src="https://bit.ly/2Bb2Iti" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1954</time> - <i>Horton Hears a Who</i> is published, becoming a best seller and living on for decades.
+                    </div>
+                </li>
+                <li id="seussTxt12" onmouseover="imgFunc(this.id, 'suessIMG12')" style="cursor: pointer;">
+                    <img id= "suessIMG12" alt="Two of Seuss's biggest successes!" width="50" src="https://bit.ly/2s4gYSF" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1957</time> - Two more of Seuss's biggest successes are published: <i>The Cat in the Hat</i> and <i>How the Grinch Stole Christmas</i>. He also becomes the president of his publishing company "Beginner Books" which he
+                    <br>co-founded with Phyllis Cerf.
+                    </div>
+                </li>
+                <li id="seussTxt13" onmouseover="imgFunc(this.id, 'suessIMG13')" style="cursor: pointer;">
+                    <img id= "suessIMG13" alt="Dr. Seuss's Beginner's Books collection!" width="50" src="https://bit.ly/2J1FxJG" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1959 to 1960</time> - "Beginner Books" publishes more successful Suess hits including <i>Happy Birthday to You!</i>, <i>Green Eggs and Ham</i>, and <i>One Fish Two Fish, Red Fish Blue Fish</i>.
+                    </div>
+                </li>
+                <li id="seussTxt14" onmouseover="imgFunc(this.id, 'suessIMG14')" style="cursor: pointer;">
+                    <img id= "suessIMG14" alt="Christmas Movies - <b><i>How the Grinch Stole Christmas</b></i> (1966)" width="50" src="https://bit.ly/2LpFm9B" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1966</time> - <i>How the Grinch Stole Christmas</i> first airs on CBS as a 26-minute short American animated television special directed by Chuck Jones. 
+                    </div>
+                </li>
+                <li id="seussTxt15" onmouseover="imgFunc(this.id, 'suessIMG15')" style="cursor: pointer;">
+                    <img id= "suessIMG15" alt="Helen dies in 1967." width="50" src="https://bit.ly/2IISapR" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1967</time> - Helen Palmer Geisel, Seuss's wife, commits suicide by overdosing. 
+                    </div>
+                </li>
+                <li id="seussTxt16" onmouseover="imgFunc(this.id, 'suessIMG16')" style="cursor: pointer;">
+                    <img id= "suessIMG16" alt="Theodor marries Audrey Stone Dimond."  src="https://bit.ly/2IImgd0" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1968</time> - Theodor marries Audrey Stone Dimond.
+                    </div>
+                </li>
+                <li id="seussTxt17" onmouseover="imgFunc(this.id, 'suessIMG17')" style="cursor: pointer;">
+                    <img id= "suessIMG17" alt="<b><i>'The Lorax'"  src="https://bit.ly/2KR00OS" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1971</time> - Seuss publishes <i>The Lorax</i> and is awarded He was awarded the Peabody Award for his television specials as well as the First Outstanding Author Award.
+                    </div>
+                </li>
+                <li id="seussTxt18" onmouseover="imgFunc(this.id, 'suessIMG18')" style="cursor: pointer;">
+                    <img id= "suessIMG18" alt="Dr. Seuss Day!"  src="https://bit.ly/2x9tdCw" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1981</time> - In wake of his 77th birthday, Dr. Seuss birthday is declared globally as Dr. Seuss Day.
+                    </div>
+                </li>
+                <li id="seussTxt19" onmouseover="imgFunc(this.id, 'suessIMG19')" style="cursor: pointer;">
+                    <img id= "suessIMG19" alt="Dr. Seuss received two Emmys, a Peabody award and a Pulitzer Prize."  src="https://bit.ly/2kkOP5O" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1984</time> - A Pulitzer Prize is awarded to Dr. Seuss. Other prizes acquired by Seuss include an Academy Award, three Emmy Awards, three Grammy Awards, and three Caldecott Honors.
+                    </div>
+                </li>
+                <li id="seussTxt20" onmouseover="imgFunc(this.id, 'suessIMG20')" style="cursor: pointer;">
+                    <img id= "suessIMG20" alt="Dr. Seuss passes away in 1991."  src="https://bit.ly/2klgS4Y" style="display:none;">
+                    <div>
+                    <time style="font-weight: bold;">1991</time> - Dr. Seuss passes away due to oral cancer at his home in La Jolla, leaving behind 44 written and illustrated books.
+                    </div>
+                </li>
+                </ul>
+                
+            </div>
+            
+        </div>
+        <div class="row col-sm-12 col-sm-offset-2"><br>
+            <blockquote>
+                <p>"The more that you read, the more things you will know. The more that you learn, the more places you'll go."</p>
+            <footer><cite>Dr. Seuss</cite></footer>
+            </blockquote>
+            <h3>If you have time, you should read more about the incredible life of Dr. Seuss on <a id="tribute-link" href="https://en.wikipedia.org/wiki/Dr._Seuss" target="_blank">Wikipedia entry</a>.</h3>
+        </div>
+    </div>
+    
+    <footer class="text-center">
+    <hr>
+    <p>Written and coded by <a href="mailto:rim.zakaria@gmail.com"><b>Rim Zakaria</b></a>.</p>
+  </footer>  
+
+</body>
+
